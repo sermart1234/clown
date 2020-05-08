@@ -1,0 +1,81 @@
+<!DOCTYPE html> <!-- Объявление формата документа -->
+<html>
+<head> <!-- Техническая информация о документе -->
+<meta charset="UTF-8"> <!-- Определяем кодировку символов документа -->
+<title>Clown</title> <!-- Задаем заголовок документа -->
+<!--<link rel="stylesheet" type="text/css" href="style.css">--> <!-- Подключаем внешнюю таблицу стилей -->
+<!-- <script src="script.js"></script> <!-- Подключаем сценарии -->
+</head>
+<body> <!-- Основная часть документа -->
+<h1>Hello</h1>
+
+<div id='1'>
+<h2>1</h2>
+<input type="radio" name="r1" value="5">Первый<br>
+<input type="radio" name="r1" value="13">Второй<br>
+<input type="radio" name="r1" value="53">Третий<br>
+<button onclick="fun1()">Проверить, какой из элементов выбран</button>
+</div>
+<div hidden id='2'>
+<h2>2</h2>
+<input type="radio" name="r1" value="5">Первый<br>
+<input type="radio" name="r1" value="13">Второй<br>
+<input type="radio" name="r1" value="53">Третий<br>
+<button onclick="fun1()">Проверить, какой из элементов выбран</button>
+</div>
+<div hidden id='3'>
+<h2>3</h2>
+<input type="radio" name="r1" value="5">Первый<br>
+<input type="radio" name="r1" value="13">Второй<br>
+<input type="radio" name="r1" value="53">Третий<br>
+<button onclick="fun1()">Проверить, какой из элементов выбран</button>
+</div>
+
+<!--
+<form action="handler.php">
+   <p><b>Какое у вас состояние разума?</b></p>
+    <p><input name="dzen" type="radio" value="nedzen"> Не дзен</p>
+    <p><input name="dzen" type="radio" value="dzen"> Дзен</p>
+    <p><input name="dzen" type="radio" value="pdzen" checked> Полный дзен</p>
+    <p><input type="submit" value="Выбрать"></p>
+  </form> 
+ <form method="post" action="input5.php">
+   <p><b>С какими операционными системами вы знакомы?</b></p>
+   <p><input type="checkbox" name="option1" value="a1" checked>Windows 95/98<Br>
+   <input type="checkbox" name="option2" value="a2">Windows 2000<Br>
+   <input type="checkbox" name="option3" value="a3">System X<Br> 
+   <input type="checkbox" name="option4" value="a4">Linux<Br> 
+   <input type="checkbox" name="option5" value="a5">X3-DOS</p>
+   <p><input type="submit" value="Отправить"></p>
+  </form>
+<button>Жми меня, чем хочешь!</button>
+<script>
+  var button = document.querySelector("button");
+  button.addEventListener("mousedown", function(event) {
+    if (event.which == 1)
+      console.log("Левая");
+    else if (event.which == 2)
+      console.log("Средняя");
+    else if (event.which == 3)
+      console.log("Правая");
+  });
+</script>-->
+<script>
+var step = 1;
+var w = 0;
+function fun1() {
+    var rad=document.getElementsByName('r1');
+    for (var i=0;i<rad.length; i++) {
+        if (rad[i].checked) {
+			w = w + i;
+			console.log(rad[i].value);
+			console.log(w);
+            //alert('Выбран '+i+' radiobutton');
+			document.getElementById(step).style.display='none'; // Скроет слой
+			document.getElementById(step+1).style.display = 'block'; //покажет
+			step = step + 1;
+        }
+    }
+}</script>
+</body>
+</html>
