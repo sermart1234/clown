@@ -1,81 +1,165 @@
-<!DOCTYPE html> <!-- Объявление формата документа -->
+<!DOCTYPE html>
 <html>
-<head> <!-- Техническая информация о документе -->
-<meta charset="UTF-8"> <!-- Определяем кодировку символов документа -->
-<title>Clown</title> <!-- Задаем заголовок документа -->
-<!--<link rel="stylesheet" type="text/css" href="style.css">--> <!-- Подключаем внешнюю таблицу стилей -->
-<!-- <script src="script.js"></script> <!-- Подключаем сценарии -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Clown</title>
+<link rel="shortcut icon" href="https://vk.com/emoji/e/f09fa4a1.png" type="image/x-icon">
 </head>
-<body> <!-- Основная часть документа -->
-<h1>Hello</h1>
-
+<body style="text-align: left;">
+<h1>Какой ты клоун</h1>
+<div style="line-height: 1.9;">
 <div id='1'>
-<h2>1</h2>
-<input type="radio" name="r1" value="5">Первый<br>
-<input type="radio" name="r1" value="13">Второй<br>
-<input type="radio" name="r1" value="53">Третий<br>
-<button onclick="fun1()">Проверить, какой из элементов выбран</button>
+<h2>Что ты делаешь в конфликтной ситуации?</h2>
+<label><input type="radio" name="q1" value="5">Игнорируешь проблему<br></label>
+<label><input type="radio" name="q1" value="1">Кричишь и споришь<br></label>
+<label><input type="radio" name="q1" value="6">Начинаешь плакать<br></label>
+<label><input type="radio" name="q1" value="3">Надеешься, что кто-то за тебя решит<br></label>
+<label><input type="radio" name="q1" value="2">Пытаешься решить проблему, но как всегда проебываешься<br></label>
+<label><input type="radio" name="q1" value="4">Смотришь истории Леры в надежде слизать ответ<br></label>
+<button onclick="fun1('q1')">Подтвердить ответ</button>
 </div>
 <div hidden id='2'>
-<h2>2</h2>
-<input type="radio" name="r1" value="5">Первый<br>
-<input type="radio" name="r1" value="13">Второй<br>
-<input type="radio" name="r1" value="53">Третий<br>
-<button onclick="fun1()">Проверить, какой из элементов выбран</button>
+<h2>Если друг пошутил, а тебе не понравилось, твои действия:</h2>
+<label><input type="radio" name="q2" value="6">Побежишь жаловаться мамке, никчемный придурок<br></label>
+<label><input type="radio" name="q2" value="1">Уебешь с вертухи этого петухана<br></label>
+<label><input type="radio" name="q2" value="5">Забьешь на этих хуипутал, красавчик)<br></label>
+<label><input type="radio" name="q2" value="4">Ничего не сможешь сделать, ведь мы не показывали в наших историях план действий в такой ситуации<br></label>
+<label><input type="radio" name="q2" value="2">Шутканешь в ответ, но и эта шутка будет против тебя<br></label>
+<label><input type="radio" name="q2" value="3">Подстроишься под своего чухана и посмеешься, ведь ты никак не сможешь его раъебать<br></label>
+<button onclick="fun1('q2')">Подтвердить ответ</button>
 </div>
 <div hidden id='3'>
-<h2>3</h2>
-<input type="radio" name="r1" value="5">Первый<br>
-<input type="radio" name="r1" value="13">Второй<br>
-<input type="radio" name="r1" value="53">Третий<br>
-<button onclick="fun1()">Проверить, какой из элементов выбран</button>
+<h2>Когда у тебя появился чел для ебли, ты:</h2>
+<label><input type="radio" name="q3" value="3">Забиваешь на своих друзей<br></label>
+<label><input type="radio" name="q3" value="6">Плачешь, потому что он/она тебя пиздит<br></label>
+<label><input type="radio" name="q3" value="4">Пытаешься повторить чужие отношения<br></label>
+<label><input type="radio" name="q3" value="5">Думаешь, что ты реально единственный/ая<br></label>
+<label><input type="radio" name="q3" value="2">Влюбляешься, а он/она оказывается батей твоей подруги<br></label>
+<label><input type="radio" name="q3" value="1">Пиздишь<br></label>
+<button onclick="fun1('q3')">Подтвердить ответ</button>
+</div>
+<div hidden id='4'>
+<h2>Выбери пикчу:</h2>
+<label><input type="radio" name="q4" value="1"><img src="https://sun1-27.userapi.com/oiDPqEneN4mFgrw84JvXl8pf5pFshwSVD3QW_g/CExn79CPCos.jpg"><br></label>
+<label><input type="radio" name="q4" value="2"><img src="https://sun9-71.userapi.com/hikvwLVrNchXARLhM_PmUIZEI-Ta_LYcQpDmVg/YPm9GD5TZPQ.jpg"><br></label>
+<label><input type="radio" name="q4" value="3"><img src="https://sun1-15.userapi.com/uTHd3vC04wyvWjTa4fySofcjvVL92avBiqC63w/XkS9mvaj84U.jpg"><br></label>
+<label><input type="radio" name="q4" value="4"><img src="https://sun1-90.userapi.com/Jv0uVo_AiU0vJ_8qjCjHCJWyoE-PSSBw4u0trQ/26W8xhN4h74.jpg"><br></label>
+<label><input type="radio" name="q4" value="5"><img src="https://sun1-20.userapi.com/sRwztu8CZr0tsMn3umoe89A2foyc2Gn4tzbV0A/WsIaGVaWDK0.jpg"><br></label>
+<label><input type="radio" name="q4" value="6"><img src="https://sun1-96.userapi.com/T3DqtTaU1JXVRl5iis2AhBXrX7C_4CgNTzyKOw/0ylAaqjIHTA.jpg"><br></label>
+<button onclick="fun1('q4')">Подтвердить ответ</button>
+</div>
+<div hidden id='5'>
+<h2>Что будешь делать, если мамка не отпустит тебя порофлить с друзьями?</h2>
+<label><input type="radio" name="q5" value="4">Будешь сидеть на форумах, чтобы наконец то найти ответ на вопрос, потому что самому подумать не хватит мозга<br></label>
+<label><input type="radio" name="q5" value="6">Всю ночь проведешь в депрессии с песнями найтивыход<br></label>
+<label><input type="radio" name="q5" value="5">Смиришься с этим, ведь зачем идти на конфликт<br></label>
+<label><input type="radio" name="q5" value="1">Будешь агриться и срываться на других, потом жестко посрешься и не будешь пиздеть с ней<br></label>
+<label><input type="radio" name="q5" value="3">Будешь выполнять все ее прихоти в надежде, что эта женщина тебя куда нибудь отпустит, щенок<br></label>
+<label><input type="radio" name="q5" value="2">Скажешь, что вы просто будете гулять и все, хотя она тебя палила пьяным 28848392 раз и больше не верит тебе<br></label>
+<button onclick="fun1('q5')">Подтвердить ответ</button>
+</div>
+<div hidden id='6'>
+<h2>Если бы тебе предложили выбрать одну книгу, какую бы ты взял?</h2>
+<label><input type="radio" name="q6" value="5">Как перестать подстилаться под всех и иметь собственное мнение<br></label>
+<label><input type="radio" name="q6" value="3">1000 и 1 способ уйти из-под каблука<br></label>
+<label><input type="radio" name="q6" value="4">Переверни своё сознание или что такое индивидуальность<br></label>
+<label><input type="radio" name="q6" value="1">Как не послать человека нахуй, как только он открыл рот<br></label>
+<label><input type="radio" name="q6" value="2">Лера и все о ней<br></label>
+<label><input type="radio" name="q6" value="6">Не ной: как смириться с тем, что все смеются над тобой, а не с тобой<br></label>
+<button onclick="fun1('q6')">Подтвердить ответ</button>
+</div>
+</div>
+<div>
+<div hidden id="agr">
+<h2>Клоун-агрессор</h2>
+<text>Агрессивнее тебя только Роман!</text>
+</div>
+<div hidden id="proeb">
+<h2>Клоун-проебалка</h2>
+<text>У тебя не жизнь, а сплошной проеб, скажи спасибо неиспользованному гандону</text>
+</div>
+<div hidden id="cuckold">
+<h2>Клоун-каблук</h2>
+<text>Поздравляю, ты тот самый тип клоуна, который за пиздой не видит ничего, так держать!</text>
+</div>
+<div hidden id="suck">
+<h2>Клоун-слизалка</h2>
+<text>Ого, да у тебя премиум титул! Ты же тот самый клоун, у которого мозгов хватает только на то, чтобы слизывать чужую хуиту</text>
+</div>
+<div hidden id="lox">
+<h2>Клоун-терпила</h2>
+<text>Терпишь оскорбления в свою сторону??красавчик!лайк от Леры</text>
+</div>
+<div hidden id="plak">
+<h2>Клоун-плакса</h2>
+<text>Кап кап....Кто тут у нас плачет? Страдаешь в жизни по полной? Думаешь самый несчастный? </br>( Хуй там плавал, нытик. Иди учиться в медицинских колледж управления делами президента рф, хуила. </br>Они сделают из тебя настоящую сталь, тряпка!)</text>
+</div>
 </div>
 
-<!--
-<form action="handler.php">
-   <p><b>Какое у вас состояние разума?</b></p>
-    <p><input name="dzen" type="radio" value="nedzen"> Не дзен</p>
-    <p><input name="dzen" type="radio" value="dzen"> Дзен</p>
-    <p><input name="dzen" type="radio" value="pdzen" checked> Полный дзен</p>
-    <p><input type="submit" value="Выбрать"></p>
-  </form> 
- <form method="post" action="input5.php">
-   <p><b>С какими операционными системами вы знакомы?</b></p>
-   <p><input type="checkbox" name="option1" value="a1" checked>Windows 95/98<Br>
-   <input type="checkbox" name="option2" value="a2">Windows 2000<Br>
-   <input type="checkbox" name="option3" value="a3">System X<Br> 
-   <input type="checkbox" name="option4" value="a4">Linux<Br> 
-   <input type="checkbox" name="option5" value="a5">X3-DOS</p>
-   <p><input type="submit" value="Отправить"></p>
-  </form>
-<button>Жми меня, чем хочешь!</button>
 <script>
-  var button = document.querySelector("button");
-  button.addEventListener("mousedown", function(event) {
-    if (event.which == 1)
-      console.log("Левая");
-    else if (event.which == 2)
-      console.log("Средняя");
-    else if (event.which == 3)
-      console.log("Правая");
-  });
-</script>-->
-<script>
+function indexOfMax(arr) {
+    if (arr.length === 0) {
+        return -1;
+    }
+
+    var max = arr[0];
+    var maxIndex = 0;
+
+    for (var i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            maxIndex = i;
+            max = arr[i];
+        }
+    }
+
+    return maxIndex;
+}
+
+function fun3() {
+	n=indexOfMax(mas);
+	console.log("результат");
+	if (n==1) {id = "agr";console.log("агрессор");}
+	if (n==2) {id = "proeb";console.log("Проебалка");}
+	if (n==3) {id = "cuckold";console.log("каблук");}
+	if (n==4) {id = "suck";console.log("слизалка");}
+	if (n==5) {id = "lox";console.log("терпила");}
+	if (n==6) {id = "plak";console.log("плакса");}
+	document.getElementById(id).style.display = 'block';
+}
+
+let mas = [0, 0, 0, 0, 0, 0, 0];
 var step = 1;
-var w = 0;
-function fun1() {
-    var rad=document.getElementsByName('r1');
+function fun1(name) {
+    var rad=document.getElementsByName(name);
     for (var i=0;i<rad.length; i++) {
         if (rad[i].checked) {
-			w = w + i;
-			console.log(rad[i].value);
-			console.log(w);
-            //alert('Выбран '+i+' radiobutton');
+			mas[rad[i].value] += 1;
+			console.log(name);
 			document.getElementById(step).style.display='none'; // Скроет слой
-			document.getElementById(step+1).style.display = 'block'; //покажет
-			step = step + 1;
+			if (step < 6) {document.getElementById(step+1).style.display = 'block';} //покажет
+			if (step == 6) {fun3()}
+			step += 1;
         }
     }
 }</script>
+<style>
+img{
+width: 300px;
+height: 300px;
+margin-left: 0px;
+
+//стили которые непостредственно масштабируют картинку с сохранением пропорций
+background-repeat     : no-repeat;
+background-size       : cover;
+background-position-x : 50%;
+background-position-y : 50%;
+}
+
+button{
+margin-top: 8px;
+font-size: 20px;
+}
+</style>
 </body>
 </html>
